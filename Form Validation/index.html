@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Validator</title>
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <script defer src="/JS/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sign Up Form</h1>
+
+            <!--Form starts here -->
+            <form action="" id="form" novalidate>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        required    
+                        minlength="3"
+                        maxlength="20"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required  pattern="[0-9]{9}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email-id</label>
+                    <input type="email" id="email" placeholder="Your Email-id" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website URL</label>
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="Your Website URL starts with https:/ "
+                        required
+                        title="Your Website URL starts with https:/"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="password1">Password</label>
+                    <input
+                        type="password"
+                        id="password1"
+                        name="password1"
+                        class="password"
+                        placeholder="Enter Your Password "
+                        required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,12}$"
+                        title="Password characters  should be between 8-12 characters"
+                        autocomplete="on"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="password2"
+                        name="password2"
+                        class="password"
+                        placeholder="Re-Enter your Password "
+                        required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,12}$"
+                        title="Password characters  should be between 8-12 characters"
+                        autocomplete="on"
+                    />
+                </div>
+
+                <button type="submit" id="submit">Register Now</button>
+            </form>
+
+            <!--Form Ends here -->
+
+            <!--Message Box starts here-->
+
+            <div class="message-container">
+                <h3 id="message">All the fields are required</h3>
+            </div>
+
+            <!--Message Box Ends here-->
+        </div>
+    </body>
+</html>
